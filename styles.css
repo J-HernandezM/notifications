@@ -1,0 +1,105 @@
+/* fonts */
+@font-face {
+    font-family: 'JakartaB';
+    src: url(./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'JakartaM';
+    src: url(./assets/fonts/static/PlusJakartaSans-Medium.ttf);
+}
+/* global */
+:root{
+    /* PRIMARY */
+    --red: hsl(1, 90%, 64%);
+    --blue:hsl(219, 85%, 26%);
+    /* Neutral */
+    --white:hsl(0, 0%, 100%);
+    --very-light-grayish-blue:hsl(210, 60%, 98%);
+    --light-grayish-blue1:hsl(205, 33%, 90%);
+    --light-grayish-blue2:hsl(219, 14%, 63%);
+    --grayish-blue:hsl(219, 12%, 42%);
+    --very-dark-blue:hsl(224, 21%, 14%);
+
+    font-size: 6.25%;
+    --xl:24rem;
+    --lg:20rem;
+    --md:18rem;
+    --sm:16rem;
+
+    --notif-size:100rem;
+}   
+*{  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    font-family: 'JakartaM';
+    font-size: var(--sm); /* ojo quitar luego */
+
+    background-color: var(--light-grayish-blue1);
+}
+/* layout */
+main{
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 98vh;
+    min-height: 900rem;
+
+    padding: 0rem 20rem 30rem 20rem;
+}
+.up{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+}
+.down{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, var(--notif-size));
+    height: 90%;
+}
+/* typography */
+.up__title{
+    margin-right: 12rem;
+
+    color: var(--very-dark-blue);
+    font-family: 'JakartaB';
+    font-size: var(--xl);
+}
+.up__right{
+    color: var(--grayish-blue);
+}
+/* components */
+.notif{
+    height: 100%;
+}
+.up__left{
+    display: flex;
+}
+.up__unreadnum{
+    display: block;
+    text-align: center;
+    line-height: 30rem;
+
+    width: 35rem;
+
+    font-weight: 600;
+    color: var(--white);
+
+    border-radius: 7rem;
+    background-color: var(--blue);
+}
+.notif{
+    display: flex;
+    width: 100%;
+}
+.notif__avatar{
+    width: 40rem;
+    height: 40rem;
+}
+/* states */
+.inactive{display: none;}
