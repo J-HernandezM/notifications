@@ -1,4 +1,5 @@
 const notifs= document.querySelectorAll('.notif')
+const texts=document.querySelectorAll('.textNotif')
 const unreadDots= document.querySelectorAll('.notif__redDot')
 const readBtn=document.querySelector('.readButton') 
 const topNumber=document.querySelector('.up__unreadnum')
@@ -30,3 +31,44 @@ function howManyUnreads(){
     })
     topNumber.innerHTML=unreadedNotifications
 }
+//CAMBIAR UNO A LA VEZ
+notifs.forEach((notif)=>{
+    notif.addEventListener('click', (selectedObject)=>{
+        let element
+        let currentParent
+        let containsNotifClass=selectedObject.target.classList.contains('notif')
+        //identificar segun lo que haya dado click el notif respectivo
+        if(!containsNotifClass){
+            currentParent=selectedObject.target.parentElement
+            let isParentNotif=currentParent.classList.contains('notif')
+            while(!isParentNotif){
+                currentParent=currentParent.parentElement
+                isParentNotif=currentParent.classList.contains('notif')
+            }
+            element=currentParent
+        }
+        else{
+            element=selectedObject.target
+        }
+        //usar el notif srespectivo para cambiar los estados necesarios
+        let isRead=element.classList.contains('readed')
+        if(!isRead){
+            element.classList.add('readed')
+        }
+        else{
+            element.classList.remove('readed')
+        }
+        unreadDots.forEach((dot)=>{
+            //encontrar el dot que hace match con el notif seleccionado
+            if(dot.id==`${element.id}dot`){
+                let isntDotted=dot.classList.contains('inactive')
+                if(!isntDotted){
+                    dot.classList.add('inactive')
+                }
+                else{
+                    dot.classList.remove('inactive')
+                }
+            }
+        })
+    })  
+})
