@@ -95,6 +95,18 @@ main{
     color: var(--blue);
 }
 /* components */
+.readButton:hover, .user:hover, .notif__object:hover {
+    cursor: pointer;
+    color: var(--blue);
+    font-family: 'JakartaB';
+}
+.notif__picture:hover{
+    cursor: pointer;
+}
+.notif__message:hover{
+    background-color: var(--light-grayish-blue1);
+    cursor: pointer;
+}
 .up__left{
     display: flex;
 }
@@ -162,9 +174,7 @@ main{
 }
 /* states */
 .inactive{display: none;}
-/* @media (min-width:500px) and (max-width:1059px){
-
-} */
+.readed{background-color: var(--white);}
 @media (min-width:500px){
     body{
         display: grid;
