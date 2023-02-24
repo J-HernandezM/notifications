@@ -185,6 +185,7 @@ main{
     main{
         width: 52%;
         height: 85%;
+        max-width: 730rem;
         min-width: 500rem;
         min-height: 500rem;
 

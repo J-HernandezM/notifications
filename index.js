@@ -58,6 +58,7 @@ notifs.forEach((notif)=>{
         else{
             element.classList.remove('readed')
         }
+        howManyUnreads()
         unreadDots.forEach((dot)=>{
             //encontrar el dot que hace match con el notif seleccionado
             if(dot.id==`${element.id}dot`){
