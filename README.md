@@ -16,7 +16,7 @@ Esta es mi propuesta de solucion al reto [Notifications page challenge on Fronte
 
 ## Descripcion
 
-Panel de notificaciones interactivo, permite marcar como leido o no leido o todos a la vez.
+Panel de notificaciones interactivo, permite marcar como leido o no leido o todos a la vez. Ademas las notificaciones estan creadas dinamicamente desde JavaScript simulando el uso de una API creando una clase y diferentes instancias para cada notificacion.
 
 ## El desafio
 
@@ -42,6 +42,10 @@ Para este ejercicio lo que mas se me complico fueron los estilos CSS, en general
 
 En cuanto al JavaScript me senti mas habil en ese aspecto, pienso que lo logre solucionar en un mejor tiempo y sin mayores complicaciones.
 
+Un dia despues de presentar la solucion me propuse el reto de crear los elementos de cada notificacion dinamicamente desde JavaScript y presentarlos en el HTML con una estructura que depende del tipo de notificacion, simulando la creacion de una API al crear una clase y hardcodeando los elementos usando la creacion de una clase y de instancias para cada notificacion.
+
+Para implementar este cambio no tuve que hacer muchos cambios en el JavaScript, simplemente tener en cuenta que algunas variables globales ahora tendrian que ser locales, ya que por ejemplo, cada notificacion no ha sido creada como para que el JS lo lea sino hasta que este ha sido ejecutado, con lo cual lo unico que se tuvo que cambiar fue el orden de donde se crean y cargan las variables, asi como pasar algunas como parametros en otras funciones para que estas puedan tomar los valores de aquellas variables que antes eran globales y de este modo no tener que cambiar mucho el codigo.
+
 ## Hecho con
 
 - Semantic HTML5 markup
@@ -58,6 +62,8 @@ Configurar un contenedor grid para que sus elementos no se salgan, que tenga alt
 Aprendi que al anadir un eventListener puedo dar click a todos sus elementos hijos y referirme a ellos tambien como elemento seleccionado, antes pensaba que esto solo lo podia hacer con el elemento padre.
 
 Aprendi tambien la diferencia entre auto-fill y auto-fit, asi como el uso de la propiedad grid-auto-rows
+
+Mejore mi rapidez a la hora de manejar clases y elementos dinamicos en HTML a traves de JavaScript.
 
 ## Aprendiendo
 Me gustaria mejorar mi habilidad para hacer layouts, sobretodo la parte de CSS es la que mas se me esta complicando

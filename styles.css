@@ -145,15 +145,7 @@ main{
     width: 45rem;
     height: 45rem;
 }
-#n5{
-    display: grid;
-    grid-template-columns: 62rem auto 45rem;
-}
-#n4{
-    display: grid;
-    grid-template-rows: 60rem 1fr;
-    grid-template-columns: 62rem 1fr;
-}
+
 .notif__message{
     grid-area: 2/2/3/3;
 
@@ -176,6 +168,15 @@ main{
 /* states */
 .inactive{display: none;}
 .readed{background-color: var(--white);}
+.messaged{
+    display: grid;
+    grid-template-rows: 60rem 1fr;
+    grid-template-columns: 62rem 1fr;
+}
+.imageInteraction{
+    display: grid;
+    grid-template-columns: 62rem auto 45rem;
+}
 @media (min-width:500px){
     body{
         display: grid;
