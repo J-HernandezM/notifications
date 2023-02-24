@@ -70,6 +70,7 @@ Me gustaria mejorar mi habilidad para hacer layouts, sobretodo la parte de CSS e
 
 Me gustaria en los siguientes proyectos seguir aplicando JavaScript asi sea basico para no olvidar las cositas que he aprendido.
 
+En este proyecto quisiera anadir las notificaciones de manera dinamica desde el JavaScript como si estas provinieran desde una API, es un feature que hare luego
 
 ## Autor
 
