@@ -38,7 +38,7 @@ body{
     font-family: 'JakartaM';
     font-size: var(--sm); /* ojo quitar luego */
 
-    background-color: var(--light-grayish-blue1);
+    background-color: var(--very-light-grayish-blue);
 }
 /* layout */
 main{
